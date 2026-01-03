@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice - SpeakUp</title>
+  <link rel="stylesheet" href="../../css/styles.css" />
+  <link rel="stylesheet" href="../../css/practice.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-icon">
+          <i class="fas fa-comment-dots"></i>
+        </div>
+        <h2>SpeakUp</h2>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="../dashboard/dashboard.php" class="nav-link">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a href="practice.html" class="nav-link active">Practice</a>
+        </li>
+        <li class="nav-item">
+          <a href="quiz.php" class="nav-link">Quiz</a>
+        </li>
+        <li class="nav-item">
+          <a href="../tools/trans.html" class="nav-link">Translator</a>
+        </li>
+        <li class="nav-item">
+          <a href="../dashboard/progress.html" class="nav-link">Progress</a>
+        </li>
+        <li class="nav-item">
+          <a href="../../index.html#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="../../index.html#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <div class="nav-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="practice-main">
+    <div class="container">
+      <!-- Practice Header -->
+      <section class="practice-header">
+        <div class="header-content">
+          <h1>Select a Language to Practice</h1>
+          <p>
+            Choose a language and start improving your pronunciation, fluency,
+            and confidence
+          </p>
+        </div>
+      </section>
+
+      <!-- Language Selection -->
+      <section class="language-level-selection">
+        <div class="language-grid">
+          <a href="english-lessons.php" class="language-card" data-language="english">
+            <div class="language-header">
+              <span class="language-name">English</span>
+              <span class="language-tag">EN</span>
+            </div>
+            <div class="language-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+          </a>
+
+          <a href="spanish-lessons.php" class="language-card" data-language="spanish">
+            <div class="language-header">
+              <span class="language-name">Spanish</span>
+              <span class="language-tag">ES</span>
+            </div>
+            <div class="language-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+          </a>
+
+          <a href="japanese-lessons.php" class="language-card" data-language="japanese">
+            <div class="language-header">
+              <span class="language-name">Japanese</span>
+              <span class="language-tag">JP</span>
+            </div>
+            <div class="language-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+          </a>
+
+          <a href="hindi-lessons.php" class="language-card" data-language="hindi">
+            <div class="language-header">
+              <span class="language-name">Hindi</span>
+              <span class="language-tag">HI</span>
+            </div>
+            <div class="language-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="../../js/script.js"></script>
+</body>
+
+</html>

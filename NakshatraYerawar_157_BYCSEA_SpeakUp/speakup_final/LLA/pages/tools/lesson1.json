@@ -1,0 +1,27 @@
+﻿{
+  "id": 1,
+  "description": "Practice simple greetings, introductions, and polite phrases.",
+  "exercises": [
+    {
+      "lang": "en-US",
+      "title": "Say hello",
+      "id": 1,
+      "phrase": "Hello, nice to meet you"
+    },
+    {
+      "lang": "en-US",
+      "title": "Ask how someone is",
+      "id": 2,
+      "phrase": "How are you today?"
+    },
+    {
+      "lang": "en-US",
+      "title": "Introduce yourself",
+      "id": 3,
+      "phrase": "My name is Alex"
+    }
+  ],
+  "language": "english",
+  "level": "beginner",
+  "title": "Greetings and Introductions"
+}

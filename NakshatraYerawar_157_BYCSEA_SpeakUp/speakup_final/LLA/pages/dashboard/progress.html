@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress - SpeakUp</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/progress.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-icon">
+          <i class="fas fa-comment-dots"></i>
+        </div>
+        <h2>SpeakUp</h2>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="dashboard.php" class="nav-link">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a href="practice.html" class="nav-link">Practice</a>
+        </li>
+        <li class="nav-item">
+          <a href="quiz.php" class="nav-link">Quiz</a>
+        </li>
+        <li class="nav-item">
+          <a href="lessons/sample2.php" class="nav-link">Translator</a>
+        </li>
+        <li class="nav-item">
+          <a href="progress.html" class="nav-link active">Progress</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#contact" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <div class="nav-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="progress-main">
+    <div class="container">
+      <!-- Progress Header -->
+      <section class="progress-header">
+        <div class="header-content">
+          <h1>Your Learning Journey</h1>
+          <p>
+            Track your speaking progress, celebrate achievements, and discover
+            areas for improvement
+          </p>
+        </div>
+      </section>
+
+      <!-- Analysis Period -->
+      <div class="progress-content">
+        <div class="analysis-section">
+          <div class="analysis-card">
+            <h3>Analysis Period</h3>
+            <div class="date-inputs">
+              <div class="input-group">
+                <label>From Date</label>
+                <input type="date" id="from-date" value="2024-01-01" />
+              </div>
+              <div class="input-group">
+                <label>To Date</label>
+                <input type="date" id="to-date" value="2024-01-31" />
+              </div>
+            </div>
+            <button class="btn btn-primary" id="compare-progress">
+              Compare Progress
+            </button>
+
+            <div class="quick-stats">
+              <h4>Quick Stats</h4>
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="fas fa-fire"></i>
+                  </div>
+                  <div class="stat-content">
+                    <span class="stat-value">15</span>
+                    <span class="stat-label">Day Streak</span>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="stat-content">
+                    <span class="stat-value">2.5h</span>
+                    <span class="stat-label">Total Time</span>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="fas fa-trophy"></i>
+                  </div>
+                  <div class="stat-content">
+                    <span class="stat-value">87%</span>
+                    <span class="stat-label">Avg Score</span>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="stat-content">
+                    <span class="stat-value">24</span>
+                    <span class="stat-label">Lessons</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-section">
+          <div class="chart-card">
+            <h3>Progress Over Time</h3>
+            <div class="chart-header">
+              <span class="chart-title">Overall Score Trend</span>
+              <div class="chart-legend">
+                <div class="legend-item">
+                  <div class="legend-color overall"></div>
+                  <span>Overall</span>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-color pronunciation"></div>
+                  <span>Pronunciation</span>
+                </div>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="progress-chart" width="400" height="200"></canvas>
+            </div>
+            <div class="chart-insights">
+              <div class="insight-item">
+                <i class="fas fa-arrow-up text-green"></i>
+                <span>Your pronunciation has improved by 12% this month</span>
+              </div>
+              <div class="insight-item">
+                <i class="fas fa-calendar text-blue"></i>
+                <span>You've practiced 5 days this week</span>
+              </div>
+              <div class="insight-item">
+                <i class="fas fa-target text-purple"></i>
+                <span>You're on track to reach your monthly goal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Analytics -->
+      <section class="detailed-analytics">
+        <div class="analytics-grid">
+          <!-- Skill Breakdown -->
+          <div class="analytics-card">
+            <h3>Skill Breakdown</h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Pronunciation</span>
+                  <span class="skill-score">92%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="width: 92%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Fluency</span>
+                  <span class="skill-score">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Grammar</span>
+                  <span class="skill-score">78%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="width: 78%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-header">
+                  <span class="skill-name">Vocabulary</span>
+                  <span class="skill-score">88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-fill" style="width: 88%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weekly Activity -->
+          <div class="analytics-card">
+            <h3>Weekly Activity</h3>
+            <div class="activity-calendar">
+              <div class="calendar-header">
+                <span>January 2024</span>
+              </div>
+              <div class="calendar-grid">
+                <div class="calendar-day" data-activity="high">
+                  <span class="day-number">1</span>
+                  <div class="activity-indicator"></div>
+                </div>
+                <div class="calendar-day" data-activity="medium">
+                  <span class="day-number">2</span>
+                  <div class="activity-indicator"></div>
+                </div>
+                <div class="calendar-day" data-activity="high">
+                  <span class="day-number">3</span>
+                  <div class="activity-indicator"></div>
+                </div>
+                <div class="calendar-day" data-activity="low">
+                  <span class="day-number">4</span>
+                  <div class="activity-indicator"></div>
+                </div>
+                <div class="calendar-day" data-activity="high">
+                  <span class="day-number">5</span>
+                  <div class="activity-indicator"></div>
+                </div>
+                <div class="calendar-day" data-activity="medium">
+                  <span class="day-number">6</span>
+                  <div class="activity-indicator"></div>
+                </div>
+                <div class="calendar-day" data-activity="high">
+                  <span class="day-number">7</span>
+                  <div class="activity-indicator"></div>
+                </div>
+                <!-- More days... -->
+                <div class="calendar-day" data-activity="high">
+                  <span class="day-number">8</span>
+                  <div class="activity-indicator"></div>
+                </div>
+                <div class="calendar-day" data-activity="medium">
+                  <span class="day-number">9</span>
+                  <div class="activity-indicator"></div>
+                </div>
+                <div class="calendar-day" data-activity="high">
+                  <span class="day-number">10</span>
+                  <div class="activity-indicator"></div>
+                </div>
+                <div class="calendar-day" data-activity="low">
+                  <span class="day-number">11</span>
+                  <div class="activity-indicator"></div>
+                </div>
+                <div class="calendar-day" data-activity="high">
+                  <span class="day-number">12</span>
+                  <div class="activity-indicator"></div>
+                </div>
+                <div class="calendar-day" data-activity="medium">
+                  <span class="day-number">13</span>
+                  <div class="activity-indicator"></div>
+                </div>
+                <div class="calendar-day" data-activity="high">
+                  <span class="day-number">14</span>
+                  <div class="activity-indicator"></div>
+                </div>
+              </div>
+              <div class="calendar-legend">
+                <div class="legend-item">
+                  <div class="legend-dot high"></div>
+                  <span>High Activity</span>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-dot medium"></div>
+                  <span>Medium Activity</span>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-dot low"></div>
+                  <span>Low Activity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Achievements -->
+          <div class="analytics-card">
+            <h3>Recent Achievements</h3>
+            <div class="achievements-list">
+              <div class="achievement-item">
+                <div class="achievement-icon">
+                  <i class="fas fa-fire"></i>
+                </div>
+                <div class="achievement-content">
+                  <h4>7-Day Streak</h4>
+                  <p>You've practiced for 7 consecutive days!</p>
+                  <span class="achievement-date">2 days ago</span>
+                </div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <div class="achievement-content">
+                  <h4>Pronunciation Master</h4>
+                  <p>Scored 95% on pronunciation exercises</p>
+                  <span class="achievement-date">1 week ago</span>
+                </div>
+              </div>
+              <div class="achievement-item">
+                <div class="achievement-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="achievement-content">
+                  <h4>Lesson Complete</h4>
+                  <p>Finished "Daily Conversation Practice"</p>
+                  <span class="achievement-date">3 days ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Goals & Targets -->
+          <div class="analytics-card">
+            <h3>Goals & Targets</h3>
+            <div class="goals-list">
+              <div class="goal-item">
+                <div class="goal-header">
+                  <span class="goal-title">Daily Practice</span>
+                  <span class="goal-progress">24/30 min</span>
+                </div>
+                <div class="goal-bar">
+                  <div class="goal-fill" style="width: 80%"></div>
+                </div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-header">
+                  <span class="goal-title">Weekly Lessons</span>
+                  <span class="goal-progress">5/7 lessons</span>
+                </div>
+                <div class="goal-bar">
+                  <div class="goal-fill" style="width: 71%"></div>
+                </div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-header">
+                  <span class="goal-title">Monthly Streak</span>
+                  <span class="goal-progress">15/30 days</span>
+                </div>
+                <div class="goal-bar">
+                  <div class="goal-fill" style="width: 50%"></div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-secondary">Set New Goals</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Export & Share -->
+      <section class="export-section">
+        <div class="export-card">
+          <h3>Export & Share Progress</h3>
+          <p>Download your progress report or share your achievements</p>
+          <div class="export-actions">
+            <button class="btn btn-outline">
+              <i class="fas fa-download"></i>
+              Download Report
+            </button>
+            <button class="btn btn-outline">
+              <i class="fas fa-share"></i>
+              Share Progress
+            </button>
+            <button class="btn btn-outline">
+              <i class="fas fa-print"></i>
+              Print Summary
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/progress.js"></script>
+</body>
+
+</html>
